@@ -16,7 +16,7 @@ namespace Awesome
 
         static void Main()
         {
-            botClient = new TelegramBotClient("763774086:AAFB4DTaKbU-l-txbwplQ1_SUFtd854ck6A");
+            botClient = new TelegramBotClient("XXXYOURTOKENHEREXXX");
 
             var me = botClient.GetMeAsync().Result;
             Console.WriteLine(
