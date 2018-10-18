@@ -47,157 +47,53 @@ namespace Awesome
             string output;
             long willson;
             string msg;
-            string cooldown;
             string hotspots = "\n *Top Notch XP Grinding Spots* \n \n 1: Copenhagen, Denmark / 55.662278, 12.56246 \n 2: German Mall, Germany / 51.48986, 6.87533 \n 3: Paris Mall, Paris, France / 48.890717, 2.23783 \n \n *Coordinates List* \n \n 1: Chicago Lake Front / 42.0411,-87.7102 ( 60 Pokestops  \n 2: New York / 40.75512,-73.9836 ( 7 Pokestops  \n 3: Japan / 35.6961,139.8144 ( 9 Pokestops  \n 4: Mall of Scandanavia, Sweden / 59.370392, 18.002844 ( 6 Pokestops  \n 5: Disneyland, Florida / 33.8119,-117.919 \n 6: Victory Memorial Park, Minneapolis / 45.0301,-93.3195 \n 7: Central Park, New York / 40.7803,-73.963 \n 8: Santa Monica, California / 34.0076,-118.499 \n 9: Liberty Park / 40.7442,-111.874 \n 10: Paris / 48.8615, 2.289 \n 11: Union Square / 37.7879,-122.407 \n 12: Sidney / -33.8610,151.212 \n 13: Austin Texas / 30.2742,-97.740 \n 14: Olympia / 47.0477,-122.9041 ( 4 Pokestops  \n 16: NgurahRai Airport / -8.7467,115.166 \n 17: Times square, New York / 40.7589,-73.985 \n 18: Big Ben, London / 51.5010,-0.124 \n 19: Tokyo Disneyland / 35.6312,139.880 \n 20: Waikiki Aquarium / 21.2658,-157.821 \n 21: Rigos Loop / 21.2983,-157.860 \n 22: Jimmys Loop, USA 32.7758,-96.796 \n 23: Toms Loop, Ann Arbor / 42.2808,-83.743 \n 24: San Francisco Pier, California / 39 37.8095,-122.410 \n 25: Alameda, Mexico / 19.4362,-99.144 \n 26: Sydney Botanical / -33.8643,151.215 \n 27: Bidadari, Indonesia / -6.0356,106.746 \n 28: Long Beach, California / 33.7700,-118.193 \n 29: Den Haag, Netherland / 52.0689,4.220 \n 30: Korea / 37.5113,127.0980 ( 11 Pokestops  \n 31: Germany Mall / 51.491104,6.88055 \n 32: Copenhagen, Denmark Mall / 55.662518, 12.56217 \n 33: (Park) National Mall, Washington DC / 38.888515, -77.024124";;
-            cooldown = " \n 1km <1min \n 2km 1min \n 3km <2min \n 4.6km 2min \n 5km 2min \n 7km 5min \n 9km <7min \n 10km 7min \n 12km 8min \n 18km 10min \n 26km 15min \n 42km 19min \n 65km <22min \n 76km <25min \n 81km 25min \n 100km <35min \n 220km 40min \n 250km 45min \n 350km 51min \n 460km 58min \n 500km 60min \n 565km 67min \n 700km 75min \n 716km 78min \n 830km  <86min \n 1000km 90min \n 1500km+  2hr";
+            string cooldown = cooldown = " \n 1km <1min \n 2km 1min \n 3km <2min \n 4.6km 2min \n 5km 2min \n 7km 5min \n 9km <7min \n 10km 7min \n 12km 8min \n 18km 10min \n 26km 15min \n 42km 19min \n 65km <22min \n 76km <25min \n 81km 25min \n 100km <35min \n 220km 40min \n 250km 45min \n 350km 51min \n 460km 58min \n 500km 60min \n 565km 67min \n 700km 75min \n 716km 78min \n 830km  <86min \n 1000km 90min \n 1500km+  2hr";
 
             if (e.Message.Text != null)
             {
                 Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}.");
                     if (e.Message.Text == "/cd")
                     {
-                        await botClient.SendTextMessageAsync(
+                      await botClient.SendTextMessageAsync(
                         chatId: e.Message.Chat,
-
                         text: "Cooldown Tabelle: \n" + cooldown,
-                          parseMode: ParseMode.Markdown
-                        );
+                        parseMode: ParseMode.Markdown
+                      );
                     }
 
                     else if (e.Message.Text == "/hs")
                     {
-                        await botClient.SendTextMessageAsync(
+                      await botClient.SendTextMessageAsync(
                         chatId: e.Message.Chat,
-
                         text: "Spoof Hotspots: \n" + hotspots,
-                          parseMode: ParseMode.Markdown
-                        );
+                        parseMode: ParseMode.Markdown
+                      );
                     }
                     else if (e.Message.Text == "/rb")
                     {
-
-
-                        await botClient.SendPhotoAsync(
+                      await botClient.SendPhotoAsync(
                         chatId: e.Message.Chat,
                         photo: "https://github.com/r4nd0wn/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Bosses.jpg?raw=true",
                         caption: "<b>Raid Gegner und 100% WP</b>.",
                         parseMode: ParseMode.Html
-                    );
+                      );
                     }
                     else if (e.Message.Text == "/rwd")
                     {
-                        await botClient.SendPhotoAsync(
-                                             chatId: e.Message.Chat,
-                                            photo: "https://github.com/r4nd0wn/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Battle-Item-Rewards.png?raw=true",
-                                             caption: "<b>Raid Bundle Menge</b>.",
-                                             parseMode: ParseMode.Html
-                                         );
-                        await botClient.SendPhotoAsync(
-                         chatId: e.Message.Chat,
+                      await botClient.SendPhotoAsync(
+                        chatId: e.Message.Chat,
+                        photo: "https://github.com/r4nd0wn/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Battle-Item-Rewards.png?raw=true",
+                        caption: "<b>Raid Bundle Menge</b>.",
+                        parseMode: ParseMode.Html
+                      );
+                      await botClient.SendPhotoAsync(
+                        chatId: e.Message.Chat,
                         photo: "https://github.com/r4nd0wn/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Boss-Item-Rewards.jpg?raw=true",
-                         caption: "<b>Raid Bundle Prozent</b>.",
-                         parseMode: ParseMode.Html
-
-                        );
-                    }
-                    else if (e.Message.Text == "/ivmt")
-                    {
-                        await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: "Perfekte IV für _Mewtu_ ready2copypasta \n \n _INFO:_ \n Beinhaltet 98% mit 15 ATK \n Falls du dein Spiel auf Englisch hast, benutze bitte */ivmten*",
-                        parseMode: ParseMode.Markdown
-                     ); await botClient.SendTextMessageAsync(
-                         chatId: e.Message.Chat,
-                         text: pivmt,
-                         parseMode: ParseMode.Markdown
+                        caption: "<b>Raid Bundle Prozent</b>.",
+                        parseMode: ParseMode.Html
                       );
                     }
-                    else if (e.Message.Text == "/ivmten")
-                    {
-                        await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: "Perfekte IV für _Mewtu_ ready2copypasta \n \n _INFO:_ \n Beinhaltet 98% mit 15 ATK \n Englische Version",
-                        parseMode: ParseMode.Markdown
-                     ); await botClient.SendTextMessageAsync(
-                         chatId: e.Message.Chat,
-                         text: pivmten,
-                         parseMode: ParseMode.Markdown
-                      );
-                    }
-                    /*
-                    else if (e.Message.Text == "/ivdp")
-                    {
-                        await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: "Perfekte IV für _Despotar_ ready2copypasta \n \n _INFO:_ \n Beinhaltet 98% mit 15 ATK \n Falls du dein Spiel auf Englisch hast, benutze bitte /ivdpen*",
-                        parseMode: ParseMode.Markdown
-                     ); await botClient.SendTextMessageAsync(
-                         chatId: e.Message.Chat,
-                         text: pivtn,
-                         parseMode: ParseMode.Markdown
-                      );
-                    }
-                    else if (e.Message.Text == "/ivdpen")
-                    {
-                        await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: "Perfekte IV für _Despotar_ ready2copypasta \n \n _INFO:_ \n Beinhaltet 98% mit 15 ATK \n Englische Version",
-                        parseMode: ParseMode.Markdown
-                     ); await botClient.SendTextMessageAsync(
-                         chatId: e.Message.Chat,
-                         text: pivtnen,
-                         parseMode: ParseMode.Markdown
-                      );
-                    }*/
-                else if (e.Message.Text == "/ivth")
-                {
-                    await botClient.SendTextMessageAsync(
-                    chatId: e.Message.Chat,
-                    text: "Perfekte IV für _Tanhel_ ready2copypasta \n \n _INFO:_ \n Beinhaltet 98% mit 15 ATK \n Falls du dein Spiel auf Englisch hast, benutze bitte */ivthen*",
-                    parseMode: ParseMode.Markdown
-                 ); await botClient.SendTextMessageAsync(
-                     chatId: e.Message.Chat,
-                     text: pivbd,
-                     parseMode: ParseMode.Markdown
-                  );
-                }
-                else if (e.Message.Text == "/ivthen")
-                {
-                    await botClient.SendTextMessageAsync(
-                    chatId: e.Message.Chat,
-                    text: "Perfekte IV für _Tanhel_ ready2copypasta \n \n _INFO:_ \n Beinhaltet 98% mit 15 ATK \n Englische Version",
-                    parseMode: ParseMode.Markdown
-                 ); await botClient.SendTextMessageAsync(
-                     chatId: e.Message.Chat,
-                     text: pivbden,
-                     parseMode: ParseMode.Markdown
-                  );
-                }
-                else if (e.Message.Text == "/ivlv")
-                {
-                    await botClient.SendTextMessageAsync(
-                    chatId: e.Message.Chat,
-                    text: "Perfekte IV für _Tanhel_ ready2copypasta \n \n _INFO:_ \n Beinhaltet 98% mit 15 ATK \n  Falls du dein Spiel auf Englisch hast, benutze bitte */ivlven*",
-                    parseMode: ParseMode.Markdown
-                 ); await botClient.SendTextMessageAsync(
-                     chatId: e.Message.Chat,
-                     text: pivlv,
-                     parseMode: ParseMode.Markdown
-                  );
-                }
-                else if (e.Message.Text == "/ivlven")
-                {
-                    await botClient.SendTextMessageAsync(
-                    chatId: e.Message.Chat,
-                    text: "Perfekte IV für _Larvitar_ ready2copypasta \n \n _INFO:_ \n Beinhaltet 98% mit 15 ATK \n Englische Version",
-                    parseMode: ParseMode.Markdown
-                 ); await botClient.SendTextMessageAsync(
-                     chatId: e.Message.Chat,
-                     text: pivlven,
-                     parseMode: ParseMode.Markdown
-                  );
-                }
-
                 else
                     {
                     msg = e.Message.Text;
@@ -211,15 +107,15 @@ namespace Awesome
                         cp = Convert.ToInt16(Math.Floor(((((baseStats[0, pokedex] + 15) * cpm[40]) * Math.Sqrt((baseStats[1, pokedex] + 15) * cpm[40])) * Math.Sqrt((baseStats[2, pokedex] + 15) * cpm[40])) / 10));
                         output = Convert.ToString(cp);
                         await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: "Die 100IV WP in einem Raid ist:",
-                            parseMode: ParseMode.Markdown
-                          );
+                          chatId: e.Message.Chat,
+                          text: "Die 100IV WP in einem Raid ist ohne Wetterboost:",
+                          parseMode: ParseMode.Markdown
+                        );
                         await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: output,
-                            parseMode: ParseMode.Markdown
-                          );
+                          chatId: e.Message.Chat,
+                          text: output,
+                          parseMode: ParseMode.Markdown
+                        );
                         searchstring = Convert.ToString(pokedex) + "&";
                         for (int i = 1; i < 80; i++)
                         {
@@ -227,27 +123,24 @@ namespace Awesome
                             searchstring = searchstring + ",wp" + Convert.ToString(cp);
                         }
                         await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: "Der Search String für wilde 100IV Pokemons ist: \n",
-                            parseMode: ParseMode.Markdown
+                          chatId: e.Message.Chat,
+                          text: "Der Search String für wilde 100IV Pokemons ist: \n",
+                          parseMode: ParseMode.Markdown
                           );
                         await botClient.SendTextMessageAsync(
-                        chatId: e.Message.Chat,
-                        text: searchstring,
-                            parseMode: ParseMode.Markdown
-                          );
+                          chatId: e.Message.Chat,
+                          text: searchstring,
+                          parseMode: ParseMode.Markdown
+                        );
                     }
-                    
                     else
                     {
-                        await botClient.SendTextMessageAsync(
+                      await botClient.SendTextMessageAsync(
                         chatId: e.Message.Chat,
                         text: "Befehle: \n */cd*: Cooldown Tabelle \n */rb*: Raidboss Info \n */rwd*: Raid Belohnungen \n */hs*: Spoof Hotspots \n */ivmt* Perfekte IV für Mewtu \n */ivlv* Perfekte IV für Larvitar \n */ivth* Perfekte IV für Tanhel \n Pokedex nummer gibt die 100% WP in einem Raid aus" ,
-                            parseMode: ParseMode.Markdown
-                          );
-
+                        parseMode: ParseMode.Markdown
+                      );
                     }
-                    //}
                 }
             }
         }
