@@ -1,7 +1,7 @@
 # Pokemon Go Info Telegram Bot
 
 Pokemon Go Telegram Bot which calculate the perfect wild IVs and the perfect RAID IVs for any Raid bosses.
-Generation 4 will be added soon.
+Generation 4 is COMPLETLY added.
 
 Instructions:
 
