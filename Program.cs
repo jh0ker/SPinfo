@@ -113,7 +113,7 @@ namespace Awesome
                     outputwb = Convert.ToString(cp);
                     await botClient.SendTextMessageAsync(
                       chatId: e.Message.Chat,
-                      text: "Du hast nach" + pkmname[1, pokedex] "gefragt",
+                      text: "Du hast nach" + pkmname[1, pokedex] + "gefragt",
                       parseMode: ParseMode.Markdown
                     );
                     await botClient.SendTextMessageAsync(
