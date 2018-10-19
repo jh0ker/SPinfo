@@ -139,14 +139,14 @@ namespace Awesome
                     );
                     await botClient.SendTextMessageAsync(
                       chatId: e.Message.Chat,
-                      text: pkmname[1, pokedex] + "braucht " + baseStats[3, pokedex] + " Candys zum Entwickeln.",
+                      text: pkmname[1, pokedex] + " braucht " + baseStats[3, pokedex] + " Candys zum Entwickeln.",
                       parseMode: ParseMode.Markdown
                     );
                 }
-                else if (e.Message.Chat.Id == 171841070 && coords.IsMatch(e.Message.Text))
+                else if (e.Message.Chat.Id == xxx && coords.IsMatch(e.Message.Text))
                 {
                     await botClient.SendTextMessageAsync(
-                      chatId: 171841070,
+                      chatId: xxx,
                       text: e.Message.Text,
                       parseMode: ParseMode.Markdown
                     );
