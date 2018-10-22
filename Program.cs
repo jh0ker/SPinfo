@@ -167,16 +167,11 @@ namespace Awesome
                 }
                 else if (e.Message.Text == "/subscribe")
                 {
-                    bool havesubscribed = true;
+                    bool havesubscribed = false;
                     foreach (string ID in subscribed)
                     {
                         if (ID == Convert.ToString(e.Message.Chat.Id))
                         {
-                            await botClient.SendTextMessageAsync(
-                          chatId: ID,
-                          text: "You have already subscribed",
-                          parseMode: ParseMode.Markdown
-                        );
                             havesubscribed = true;
                         }
                         else
@@ -194,7 +189,14 @@ namespace Awesome
                           text: "You have been added to the subscription list.",
                           parseMode: ParseMode.Markdown
                         );
-
+                    }
+                    else
+                    {
+                        await botClient.SendTextMessageAsync(
+                      chatId: e.Message.Chat.Id,
+                      text: "You have already subscribed",
+                      parseMode: ParseMode.Markdown
+                    );
                     }
                 }
                 else
