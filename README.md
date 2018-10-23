@@ -13,6 +13,12 @@ Generation 4 is COMPLETLY added.
 5. run 'dotnet add package Telegram.Bot'
 6. run dotnet run to start the bot.
 
+### Use moderation service
+
+1. Place the User ID of the Moderation in the given space.
+2. The Moderator can send now messages to all Users by texting the BOT, who have subscribed by using the folowing Syntax:
+3. Send normal message, the end must be a valid coordinate (000.000000,000.000000)
+
 ## TODO
 Calculate the distance between 2 geo locations.
 Formular:
