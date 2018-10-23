@@ -16,4 +16,4 @@ Generation 4 is COMPLETLY added.
 ## TODO
 Calculate the distance between 2 geo locations.
 Formular:
-   *distance = 6378.388 * Math.Acos(Math.Sin(lat1) * Math.Sin(lat2) + Math.Cos(lat1) * Math.Cos(lat2) * Math.Cos(lon2 - lon1));*
+*distance = 6378.388 * Math.Acos(Math.Sin(lat1) * Math.Sin(lat2) + Math.Cos(lat1) * Math.Cos(lat2) * Math.Cos(lon2 - lon1));*
