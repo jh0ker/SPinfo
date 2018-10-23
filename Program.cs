@@ -154,7 +154,7 @@ namespace Awesome
                         );
                     }
                 }
-                else if (e.Message.Chat.Id == 171841070 && coords.IsMatch(e.Message.Text))
+                else if (e.Message.Chat.Id == MODERATORTELEGRAMID && coords.IsMatch(e.Message.Text))
                 {
                     foreach (string ID in subscribed)
                     {
