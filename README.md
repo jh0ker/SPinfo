@@ -8,11 +8,12 @@ Generation 4 is COMPLETLY added.
 
 ## Instructions:
 
-1. Get a token from the Telegram Bot Father (t.me/u/BotFather)
+1. Get a token from the Telegram [@BotFather](https://t.me/BotFather).
 2. Place your token as the value for `TOKEN` in the code.
 3. Open a command line/powershell in the main directory.
-4. Run `dotnet restore`
-5. Run `dotnet run` to start the bot.
+4. Run `dotnet restore` to set up the project and load the dependencies.
+5. Run `dotnet run` to start the bot
+6. Optional: Run `dotnet build -c Release` to compile the program. The result will be in `bin/Release/netcoreapp3.1`.
 
 ### Use moderation service
 
