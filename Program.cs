@@ -84,7 +84,7 @@ namespace Awesome
                 {
                     await botClient.SendPhotoAsync(
                       chatId: e.Message.Chat,
-                      photo: "https://github.com/r4nd0wn/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Bosses.jpg?raw=true",
+                      photo: "https://github.com/jh0ker/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Bosses.jpg?raw=true",
                       caption: "<b>Raid Bosses and max catch CP (100% IV)</b>.",
                       parseMode: ParseMode.Html
                     );
@@ -93,13 +93,13 @@ namespace Awesome
                 {
                     await botClient.SendPhotoAsync(
                       chatId: e.Message.Chat,
-                      photo: "https://github.com/r4nd0wn/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Battle-Item-Rewards.png?raw=true",
+                      photo: "https://github.com/jh0ker/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Battle-Item-Rewards.png?raw=true",
                       caption: "<b>Raid Bundle Amount</b>.",
                       parseMode: ParseMode.Html
                     );
                     await botClient.SendPhotoAsync(
                       chatId: e.Message.Chat,
-                      photo: "https://github.com/r4nd0wn/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Boss-Item-Rewards.jpg?raw=true",
+                      photo: "https://github.com/jh0ker/SPinfo/blob/master/misc/raid/Pokemon-GO-Raid-Boss-Item-Rewards.jpg?raw=true",
                       caption: "<b>Raid Bundle Percent</b>.",
                       parseMode: ParseMode.Html
                     );
